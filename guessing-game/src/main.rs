@@ -15,7 +15,7 @@ fn main() {
         println!("You guessed: {}", guess);
         match guess.cmp(&secret_number) {
             Ordering::Less => {
-                println!("Too small!")
+                println!("Too small!");
                 lower_bound = guess + 1;
             }
             Ordering::Greater => {
