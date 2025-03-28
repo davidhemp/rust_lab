@@ -4,9 +4,10 @@ use std::cmp::Ordering;
 fn main() {
 
     println!("Guess the number!");
-    let secret_number = rand::rng().random_range(1..=10);
     let mut lower_bound = 1;
-    let mut upper_bound = 10;
+    let mut upper_bound = 1000;
+    let secret_number = rand::rng().random_range(lower_bound..=upper_bound);
+
 
     loop {
         println!("Please input your guess.");
