@@ -4,16 +4,20 @@ use std::cmp::Ordering;
 fn main() {
 
     println!("Guess the number!");
-    let secret_number = rand::rng().random_range(1..=100);
+    let secret_number = rand::rng().random_range(1..=10);
 
-    println!("Please input your guess.");
-
-    let guess = rand::rng().random_range(1..=100);
-
-    println!("You guessed: {}", guess);
-    match guess.cmp(&secret_number) {
-        Ordering::Less => println!("Too small!"),
-        Ordering::Greater => println!("Too big!"),
-        Ordering::Equal => println!("You win!"),
-    }    
+    loop {
+        println!("Please input your guess.");
+        let guess = rand::rng().random_range(1..=10);
+    
+        println!("You guessed: {}", guess);
+        match guess.cmp(&secret_number) {
+            Ordering::Less => println!("Too small!"),
+            Ordering::Greater => println!("Too big!"),
+            Ordering::Equal => {
+                println!("You win!"),
+                break;
+            }
+        }
+    }
 }
