@@ -5,10 +5,12 @@ fn main() {
 
     println!("Guess the number!");
     let secret_number = rand::rng().random_range(1..=10);
+    let mut lower_bound = 1;
+    let mut upper_bound = 10;
 
     loop {
         println!("Please input your guess.");
-        let guess = rand::rng().random_range(1..=10);
+        let guess = rand::rng().random_range(lower_bound..=upper_bound);
     
         println!("You guessed: {}", guess);
         match guess.cmp(&secret_number) {
