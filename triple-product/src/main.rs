@@ -21,7 +21,8 @@ fn main() {
     let x = [1, 2, 3];
     let y = [4, 5, 6];
     let z = [7, 8, 9];
-    let result = dot_product(&x, cross_product(&y, &z));
+    let cross = cross_product(&x, &y);
+    let result = dot_product(&z, &cross);
     println!("The result of the triple product is: {}", result);
 
 }
