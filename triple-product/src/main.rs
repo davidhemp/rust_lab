@@ -5,7 +5,7 @@ fn dot_product(x: &[i32], y: &[i32]) -> i32 {
     }
     result
 }
-fn cross_product(x: &[i32], y: &[i32]) -> [i32; 3] {
+fn cross_product(x: &[i32; 3], y: &[i32; 3]) -> [i32; 3] {
     let mut z = [0; 3];
     // Cross product formula: z = x × y
     // Manual map for 3 element arrays
@@ -14,6 +14,7 @@ fn cross_product(x: &[i32], y: &[i32]) -> [i32; 3] {
     z[2] = x[0] * y[1] - x[1] * y[0];
     z
 }
+
 
 
 fn main() {
