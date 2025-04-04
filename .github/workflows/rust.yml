@@ -16,7 +16,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: guessing-game
+        working-directory: dot-product
     steps:
     - uses: actions/checkout@v4
     - name: Output rust version for educational purposes
