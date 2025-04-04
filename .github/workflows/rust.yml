@@ -16,7 +16,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: dot-product
+        working-directory: cross-product
     steps:
     - uses: actions/checkout@v4
     - name: Output rust version for educational purposes
